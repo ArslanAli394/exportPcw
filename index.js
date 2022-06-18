@@ -9,6 +9,7 @@ import nodemailer from 'nodemailer'
 import pdf from 'html-pdf'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import path from "path";
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -104,7 +105,6 @@ const PORT = process.env.PORT || 5000
 
 if(process.env.NODE_ENV =="production"){
     app.use(express.static("client/build"));
-    const path = require("path");
     app.get("*",(req,res)=>{
         res.sendFile(path.resolve(__dirname,"client","build","index.html"))
     })
