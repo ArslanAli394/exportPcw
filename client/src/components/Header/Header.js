@@ -38,17 +38,7 @@ const Header = () => {
         setUser(JSON.parse(localStorage.getItem('profile')))
     },[location])
 
-    
-    //GET REPO INFO FROM GITHUB
-    // useEffect(() => {
-    //   getMetaData()
-    // },[])
-
-
-    // const getMetaData = async() => {
-    //   const response = await axios.get('https://api.github.com/repos/panshak/arc')
-    //       // console.log(response.data);
-    // }
+  
 
     const logout =() => {
         dispatch({ type: 'LOGOUT' })
@@ -116,7 +106,7 @@ const Header = () => {
 
     if(!user) return (
         <div className={styles.header2}>
-         <img style={{width: '160px', cursor: 'pointer'}} onClick={()=> history.push('/')} src="https://i.postimg.cc/C5fxh51H/Arc-Invoice-Logo2.png" alt="arc-invoice" />
+         <img style={{width: '160px', cursor: 'pointer',marginTop:"5px"}} onClick={()=> history.push('/')} src={process.env.PUBLIC_URL+"icons/logo.png"} alt="Logo" />
         <button onClick={()=> history.push('/login')} className={styles.login}>Get started</button>
         </div>
     )
