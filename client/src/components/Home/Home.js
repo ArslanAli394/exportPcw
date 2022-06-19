@@ -7,7 +7,7 @@ const Home = () => {
         <div className={styles.pageContainer}>
             
             <section className={styles.hero}>
-                <h1>Easiest invoicing for freelancers and small businesses.</h1>
+                <h1>Easiest invoicing for freelancers and small businesses</h1>
                 <div className={styles.paragraph}>
                    
                     <p>Free and Open Source Invoicing application made with MongoDB, Express, React & Nodejs</p>
